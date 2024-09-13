@@ -17,8 +17,8 @@ export default function WinnerAnimation(props: loadingProps) {
     
 
     return (
-        <Card className="flex justify-center ">
-            <Icon className=" absolute  right-1 top-1" 
+        <Card className="flex justify-center">
+            <Icon className="absolute right-1 top-1" 
                 style={{ cursor: 'pointer' }} 
                 icon={XMarkIcon} 
                 variant='light' 
@@ -31,10 +31,13 @@ export default function WinnerAnimation(props: loadingProps) {
                 play
                 style={{ width: props.width || 250, height: props.height  || 250 }}
             />
-            <Title className="text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-green-900">
-                {`${props.name}`}                 
-                <p className='mt-4'>🥳</p>
-            </Title>
+            <div className='absolute h-full w-full flex items-center justify-center'>
+                <p className="text-center font-bold text-green-900 text-6xl	">
+                    {`${props.name}`}                 
+                    <p className='mt-4'>🥳</p>
+                </p>
+            </div>
+            
             
     </Card> 
     )

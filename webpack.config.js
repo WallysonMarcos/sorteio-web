@@ -1,6 +1,5 @@
 module.exports = {
     //...
-    experiments: {
-      buildHttp: true,
-    },
-  };
+    externalsType: "script",
+    externals: { "https://tomashubelbauer.github.io/github-pages-local-storage/index.js": "https://tomashubelbauer.github.io/github-pages-local-storage/index.js" },
+};

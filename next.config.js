@@ -2,7 +2,7 @@
 const nextConfig = {
     basePath: "/sorteio-web",
     output: "export",  
-    reactStrictMode: true,
+    reactStrictMode: true
 }
 
 module.exports = nextConfig

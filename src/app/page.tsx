@@ -35,8 +35,8 @@ export default function Home() {
   const [modalIsOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const [playCountdonw] = useSound('/sorteio-web/sounds/top5.mp3', { playbackRate: 1.3 })
-  const [playWinner] = useSound('/sorteio-web/sounds/winner.mp3')
+  const [playCountdonw] = useSound('/sounds/top5.mp3', { playbackRate: 1.3 })
+  const [playWinner] = useSound('/sounds/winner.mp3')
 
   useEffect(() => {
     const storage = GetLocalStorateData();

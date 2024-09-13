@@ -1,11 +1,6 @@
 module.exports = {
-    //...
-    externalsType: "script",
-    experiments: {
-        buildHttp: {
-          allowedUris: [
-            'https://tomashubelbauer.github.io/github-pages-local-storage/index.js',
-          ],
-        },
-      },
+    externalsType: 'script',
+    externals: {
+        lodash: ['https://tomashubelbauer.github.io/github-pages-local-storage/index.js', '_'],
+    }
 };

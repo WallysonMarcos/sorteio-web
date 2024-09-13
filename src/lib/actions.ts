@@ -1,6 +1,6 @@
+import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
 
-
-const STORAGE_KEY = "@sorteio-web"
+const STORAGE_KEY = "@sorteio-web";
 
 export function GetLocalStorateData() {
     const store = localStorage.getItem(STORAGE_KEY);

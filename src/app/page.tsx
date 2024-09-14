@@ -40,13 +40,13 @@ export default function Home() {
 
   useEffect(() => {
 
-    const init = async() => {
+    const init = async () => {
       const storage = await GetLocalStorateData();
       setParticipants([...storage]);
     }
 
     init();
-  
+
   }, [])
 
 

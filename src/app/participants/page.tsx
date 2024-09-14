@@ -1,5 +1,5 @@
 'use client'
- 
+
 import { GetLocalStorateData, SetLocalStorateData } from '@/lib/actions';
 import { ParticipantType } from '@/lib/types';
 import PeoplesAnimation from '@/ui/animations/peoples';
@@ -15,19 +15,23 @@ export default function Page() {
 
     const router = useRouter();
     const [participants, setParticipants] = useState<ParticipantType[]>([])
-    const [nameInput, setNameInput] = useState('');    
+    const [nameInput, setNameInput] = useState('');
 
     useEffect(() => {
-        const storage = GetLocalStorateData();
-        setParticipants([...storage]);
+        const init = async () => {
+            const storage = await GetLocalStorateData();
+            setParticipants([...storage]);
+        }
+
+        init();
     }, [])
 
     const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
         const names = nameInput.split(',');
         const _participants = [...participants];
-        names.map((p,index) =>  _participants.push({ id: participants.length + index, name: p, win: false }) );
-        setParticipants(_participants);       
+        names.map((p, index) => _participants.push({ id: participants.length + index, name: p, win: false }));
+        setParticipants(_participants);
         setNameInput('');
     }
 
@@ -108,7 +112,7 @@ export default function Page() {
 
 const FormButton = () => {
     const { pending } = useFormStatus();
- 
+
     return (
         <Button type='submit' icon={PlusCircleIcon} disabled={pending} color='sky'>Adicionar</Button>
     )

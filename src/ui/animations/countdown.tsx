@@ -3,13 +3,9 @@
 import Lottie from 'react-lottie-player';
 import lottieJson from '@/ui/lotties/countdown.json';
 
-type loadingProps = {
-    width?: number;
-    height?: number
-}
+ 
 
-
-export default function CountdownAnimation(props: loadingProps) {
+export default function CountdownAnimation( ) {
     
     return (
         <div className="flex justify-center py-0">
@@ -17,7 +13,7 @@ export default function CountdownAnimation(props: loadingProps) {
                 loop
                 animationData={lottieJson}
                 play
-                style={{ width: props.width ?? 250, height: props.height ?? 250 }}
+                className='w-[90%] h-[90%]' 
             />
     </div> 
     )

@@ -7,9 +7,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 
 type loadingProps = {
     name: string
-    onClose: Function;
-    width?: number;
-    height?: number;
+    onClose: Function; 
 }
 
 
@@ -28,17 +26,14 @@ export default function WinnerAnimation(props: loadingProps) {
             <Lottie
                 loop
                 animationData={lottieJson}
-                play
-                style={{ width: props.width || 250, height: props.height  || 250 }}
+                play 
             />
-            <div className='absolute h-full w-full flex items-center justify-center'>
+            <div className='absolute h-full w-full flex flex-col items-center justify-center'>
                 <p className="text-center font-bold text-green-900 text-6xl	">
-                    {`${props.name}`}                 
-                    <p className='mt-4'>🥳</p>
+                    {`${props.name}`}      
                 </p>
-            </div>
-            
-            
+                <p className='mt-4 text-6xl'>🥳</p>
+            </div> 
     </Card> 
     )
         

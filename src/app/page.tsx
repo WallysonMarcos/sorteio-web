@@ -15,15 +15,7 @@ import WinnerAnimation from '@/ui/animations/winner';
 import GiftsAnimation from '@/ui/animations/gifts';
 
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    border: 0,
-    transform: 'translate(-50%, -50%)',
-  },
+const customStyles = { 
 };
 
 export default function Home() {
@@ -79,12 +71,13 @@ export default function Home() {
 
       <Modal
         isOpen={modalIsOpen}
+        className={'flex min-h-screen flex-col items-center justify-center mx-auto max-w-3xl'}
         onRequestClose={() => { if (!loading) setModalOpen(false) }}
-        style={customStyles} >
+        ariaHideApp={false} >
         {
           loading ?
-            (<Countdown height={900} width={900} />) :
-            (<WinnerAnimation name={winner?.name || ''} height={600} width={600} onClose={() => { setModalOpen(false) }} />)
+            (<Countdown />) :
+            (<WinnerAnimation name={winner?.name || ''} onClose={() => { setModalOpen(false) }} />)
         }
       </Modal>
 

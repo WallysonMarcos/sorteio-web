@@ -39,8 +39,14 @@ export default function Home() {
   const [playWinner] = useSound('/sorteio-web/sounds/winner.mp3')
 
   useEffect(() => {
-    // const storage = GetLocalStorateData();
-    // setParticipants([...storage]);
+
+    const init = async() => {
+      const storage = await GetLocalStorateData();
+      setParticipants([...storage]);
+    }
+
+    init();
+  
   }, [])
 
 

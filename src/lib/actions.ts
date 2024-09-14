@@ -1,19 +1,19 @@
-'user serve';
+'use client';
 
 const STORAGE_KEY = "@sorteio-web";
 
-export function GetLocalStorateData() {
-    const store = localStorage.getItem(STORAGE_KEY);
+export  function GetLocalStorateData() { 
+    const store = window.localStorage.getItem(STORAGE_KEY);
     if (store == null) {
-        localStorage.setItem('@sorteio-web', JSON.stringify({ participants: [] }))
-        return [] 
+        window.localStorage.setItem('@sorteio-web', JSON.stringify({ participants: [] }))
+        return []
     } else {
         return JSON.parse(store)
-    }
+    } 
 }
 
-export function SetLocalStorateData(data: Object) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+export  function SetLocalStorateData(data: Object) { 
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); 
 }
 
 export const delay = (ms: number): Promise<void> => {

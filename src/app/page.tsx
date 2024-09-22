@@ -82,7 +82,7 @@ export default function Home() {
       </Modal>
 
       <GiftsAnimation height={150} width={300} />
-      <Title className="m-2 text-6xl font-bold tracking-tight text-green-900 ">Sorteio de Brindes</Title>
+      <Title className="m-2 text-7xl font-bold tracking-tight text-green-900 ">Sorteio de Brindes</Title>
 
 
       <Card decoration={'top'} decorationColor={'green'} key={'lastsorts'} className="p-2 mt-4">

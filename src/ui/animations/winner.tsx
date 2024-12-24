@@ -7,34 +7,34 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 
 type loadingProps = {
     name: string
-    onClose: Function; 
+    onClose: Function;
 }
 
 
 export default function WinnerAnimation(props: loadingProps) {
-    
+
 
     return (
         <Card className="flex justify-center">
-            <Icon className="absolute right-1 top-1" 
-                style={{ cursor: 'pointer' }} 
-                icon={XMarkIcon} 
-                variant='light' 
-                size='sm' 
-                color='green' 
-                onClick={ () => props.onClose()} />
+            <Icon className="absolute right-1 top-1"
+                style={{ cursor: 'pointer' }}
+                icon={XMarkIcon}
+                variant='light'
+                size='sm'
+                color='green'
+                onClick={() => props.onClose()} />
             <Lottie
                 loop
                 animationData={lottieJson}
-                play 
+                play
             />
             <div className='absolute h-full w-full flex flex-col items-center justify-center'>
-                <h1 className="text-center font-bold text-green-900 text-6xl">
+                <h1 className="text-center font-bold text-green-900 text-5xl">
                     {props.name}
                 </h1>
-                <p className='mt-4 text-6xl'>🥳</p>
-            </div> 
-    </Card> 
+                <p className='mt-4 text-5xl'>🥳</p>
+            </div>
+        </Card>
     )
-        
+
 }

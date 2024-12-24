@@ -81,8 +81,8 @@ export default function Home() {
         }
       </Modal>
 
-      <GiftsAnimation height={150} width={300} />
-      <Title className="m-2 text-6xl font-bold tracking-tight text-green-900 ">Sorteio de Brindes</Title>
+      <GiftsAnimation height={180} width={300} />
+      <h1 className="m-2 text-5xl font-bold tracking-tight text-green-900 ">Sorteio de Brindes</h1>
 
 
       <Card decoration={'top'} decorationColor={'green'} key={'lastsorts'} className="p-2 mt-4">

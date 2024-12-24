@@ -67,7 +67,7 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-4 mx-auto max-w-3xl ">
+    <main className="flex min-h-screen flex-col items-center p-2 mx-auto max-w-3xl ">
 
       <Modal
         isOpen={modalIsOpen}
@@ -82,7 +82,7 @@ export default function Home() {
       </Modal>
 
       <GiftsAnimation height={180} width={300} />
-      <h1 className="m-2 text-5xl font-bold tracking-tight text-green-900 ">Sorteio de Brindes</h1>
+      <h1 className="text-5xl font-bold tracking-tight text-green-900 ">Sorteio de Brindes</h1>
 
 
       <Card decoration={'top'} decorationColor={'green'} key={'lastsorts'} className="p-2 mt-4">

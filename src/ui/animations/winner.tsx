@@ -29,9 +29,9 @@ export default function WinnerAnimation(props: loadingProps) {
                 play 
             />
             <div className='absolute h-full w-full flex flex-col items-center justify-center'>
-                <p className="text-center font-bold text-green-900 text-6xl	">
-                    {`${props.name}`}      
-                </p>
+                <h1 className="text-center font-bold text-green-900 text-6xl">
+                    {props.name}
+                </h1>
                 <p className='mt-4 text-6xl'>🥳</p>
             </div> 
     </Card> 
